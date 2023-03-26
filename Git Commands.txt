@@ -1,0 +1,6 @@
+git config --global user.name "" , git config --global user.email ""
+git status  // shows status of files
+git add . // add files  , bring files to stage
+git commit -m "Version 1"  // commit the files ,, stage to commit
+git log // shows who changed the repositories
+git --version // shows version of git
