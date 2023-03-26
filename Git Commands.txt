@@ -4,3 +4,5 @@ git add . // add files  , bring files to stage
 git commit -m "Version 1"  // commit the files ,, stage to commit
 git log // shows who changed the repositories
 git --version // shows version of git
+git remote add origin "link of github with email" // add to centralized place
+git push -u origin master
