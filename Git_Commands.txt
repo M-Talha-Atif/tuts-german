@@ -6,3 +6,7 @@ git log // shows who changed the repositories
 git --version // shows version of git
 git remote add origin "link of github with email" // add to centralized place
 git push -u origin master
+git diff // all changes
+git diff (filename optional) // respective file changes
+git diff --staged (filename optional)
+git reset filename
