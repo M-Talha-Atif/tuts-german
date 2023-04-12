@@ -6,7 +6,48 @@ git log // shows who changed the repositories
 git --version // shows version of git
 git remote add origin "link of github with email" // add to centralized place
 git push -u origin master
-git diff // all changes
+
+git diff // all changes 
+It compares staging area with working directory. It actually shows differences
+
 git diff (filename optional) // respective file changes
 git diff --staged (filename optional)
-git reset filename
+git reset, git checkout
+git add -u, git add ., git add -A
+git clone sshlink // if i place . after ssh link , it will directly load files in my current directory
+git rm -rf .git // to delete git repository
+pwd // to move to present working directory
+ls // lists the contents
+git stores data .git folder and it has all files that we make changes
+
+File status life cycle:
+git init means untracked, git add means unmodified/tracked (add .,--add), if i change files then they become
+modified, then we need to again add command in this case, we make modified to unmodified 
+untracked -> unmodified -> modified -> staged -> unmodified
+
+git add-- is powerful as it adds renamed files, unmodified also and deleted also while
+add . only adds current and subdirectory files. git add -- is shortform of git add -- all
+
+git add -A is a safer option as it ensures that all changes are staged, 
+including those outside the current directory.
+
+If we make changes in file after staging it, git will consider it in staging area
+and then if i commit it will add my recently updated file
+
+- is used by git to recognize its commands and in -m , m mean message.
+
+touch error.log generates error.log file in your pwd, touch .gitignore will create a file
+and if we add error.log name in that file, it will ignore it for staging.
+
+If i add *.log, it will ignore all files having .log at their end. So, it is used to
+ignore files
+
+Git ignores blank folders, you can type dir/ in .gitignore file to ignore directory.
+It will ignore dir named folder everwhere in directory or subdirectories including its
+files
+
+For ignoring only outer directory, /dir/ is used. Actually, dir is folder name.
+You ignore like that foldername/foldername
+
+git rm --cached .. rm means remove files that are in our staging area. It will remove them
+and then we can apply ignore like .gitignore on them.
